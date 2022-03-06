@@ -1,0 +1,24 @@
+{
+  "name": "@vui/icon",
+  "version": "0.0.1",
+  "description": "vue3 component",
+  "keywords": [
+    "vue3"
+  ],
+  "author": "hongshibao <771989536@qq.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/icon.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "http://registry.npm.taobao.org"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  }
+}

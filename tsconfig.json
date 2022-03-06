@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "ESNext", // 打包的目标语法
+
+    /* Modules */
+    "module": "ESNext", // 模块转换后的格式
+
+    "moduleResolution": "node", // 模块解析方式
+
+    "jsx": "preserve", // 不转化jsx
+
+    "declaration": true, // 生成声明文件
+
+    "sourceMap": true,
+
+    "esModuleInterop": true, // 支持模块转化
+    "forceConsistentCasingInFileNames": true, // 强制区分大小写
+
+    /* Type Checking */
+    "strict": false,
+    "skipLibCheck": true // 跳过类库的检测
+  }
+}
