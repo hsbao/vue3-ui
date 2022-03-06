@@ -1,3 +1,4 @@
 <template>
-  <div>App</div>
+  <v-button>App</v-button>
+  <v-icon name="xiazai"></v-icon>
 </template>

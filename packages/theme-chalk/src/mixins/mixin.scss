@@ -1,0 +1,38 @@
+@import '../common/var.scss';
+
+/**
+* 使用：
+* @include(button) {
+*   color: red;
+* }
+*/
+@mixin b($block) {
+  $B: $namespace + '-' + $block; // .v-button {}
+  .#{$B} {
+    @content;
+  }
+}
+
+@mixin when($state) {
+  @at-root {
+    &.#{$state-prefix + $state} {
+      @content;
+    }
+  }
+}
+
+@mixin m($modifier) {
+  @at-root {
+    #{& + $modifier-separator + $modifier} {
+      @content;
+    }
+  }
+}
+
+@mixin e($element) {
+  @at-root {
+    #{& + $element-separator + $element} {
+      @content;
+    }
+  }
+}
