@@ -6,7 +6,7 @@
   ],
   "scripts": {
     "dev": "webpack serve --config ./examples/webpack.config.js",
-    "build": "webpack --config build/webpack.config.js",
+    "build": "webpack --config ./build/webpack.config.js",
     "build:global": "rollup -c ./build/rollup.config.global.js",
     "build:esm": "rollup -c ./build/rollup.config.js",
     "build:theme": "gulp build --gulpfile ./packages/theme-chalk/gulpfile.js"
