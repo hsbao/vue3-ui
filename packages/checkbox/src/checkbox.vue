@@ -4,15 +4,18 @@
       <input
         type="checkbox"
         v-model="model"
+        :value="label"
         :checked="isChecked"
         :name="name"
         :disabled="disabled"
         :indeterminate="indeterminate"
         @change="handleChange"
       />
+      <!-- 如果是checkbox-group<v-model就是数组 -->
+      <!-- vue的特点，对于checkbox，如果v-model是数组，那么:value的值如果是在v-model里存在，则就会被选中 -->
     </span>
     <span class="v-checkbox__label">
-      <slot></slot>
+      <slot>{{ label }}</slot>
     </span>
   </div>
 </template>

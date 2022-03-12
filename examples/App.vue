@@ -31,36 +31,26 @@
   <v-checkbox v-model="checkVal" @change="handleChange">checkbox1</v-checkbox>
   <v-checkbox v-model="checkVal" disabled>checkbox2</v-checkbox>
   <v-checkbox v-model="checkVal" indeterminate>checkbox3</v-checkbox>
+
+  <div>{{ checkboxGroupVal }}</div>
+  <v-checkbox-group v-model="checkboxGroupVal" @change="checkboxGroupChange">
+    <v-checkbox v-for="c in checkList" :key="c" :label="c"></v-checkbox>
+  </v-checkbox-group>
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue'
+import { defineComponent } from 'vue'
 
-const useButton = () => {
-  const handleClick = (e) => {
-    console.log('click')
-  }
-  return {
-    handleClick
-  }
-}
-
-const useCheckbox = () => {
-  const checkVal = ref(true)
-  const handleChange = (val) => {
-    console.log('checkbox change', val)
-  }
-  return {
-    checkVal,
-    handleChange
-  }
-}
+import { useButton } from './hooks/useButton'
+import { useCheckbox } from './hooks/useCheckbox'
+import { useCheckboxGroup } from './hooks/useCheckboxGroup'
 
 export default defineComponent({
   setup() {
     return {
       ...useButton(),
-      ...useCheckbox()
+      ...useCheckbox(),
+      ...useCheckboxGroup()
     }
   }
 })
