@@ -13,6 +13,7 @@
   }
 }
 
+// .is-loading
 @mixin when($state) {
   @at-root {
     &.#{$state-prefix + $state} {
@@ -21,6 +22,7 @@
   }
 }
 
+// v-button--primary
 @mixin m($modifier) {
   @at-root {
     #{& + $modifier-separator + $modifier} {
@@ -29,10 +31,17 @@
   }
 }
 
+// v-button__header
 @mixin e($element) {
   @at-root {
     #{& + $element-separator + $element} {
       @content;
     }
   }
+}
+
+@mixin button-type($color, $gb-color, $border-color) {
+  color: $color;
+  background-color: $gb-color;
+  border: $border-color;
 }
