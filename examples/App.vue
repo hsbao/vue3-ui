@@ -25,10 +25,16 @@
     <v-col :span="2" style="background: blue">2</v-col>
     <v-col :span="2" style="background: pink">3</v-col>
   </v-row>
+
+  <hr />
+
+  <v-checkbox v-model="checkVal" @change="handleChange">checkbox1</v-checkbox>
+  <v-checkbox v-model="checkVal" disabled>checkbox2</v-checkbox>
+  <v-checkbox v-model="checkVal" indeterminate>checkbox3</v-checkbox>
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 
 const useButton = () => {
   const handleClick = (e) => {
@@ -39,10 +45,22 @@ const useButton = () => {
   }
 }
 
+const useCheckbox = () => {
+  const checkVal = ref(true)
+  const handleChange = (val) => {
+    console.log('checkbox change', val)
+  }
+  return {
+    checkVal,
+    handleChange
+  }
+}
+
 export default defineComponent({
   setup() {
     return {
-      ...useButton()
+      ...useButton(),
+      ...useCheckbox()
     }
   }
 })

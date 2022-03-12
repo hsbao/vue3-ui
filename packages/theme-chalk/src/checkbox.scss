@@ -1,0 +1,30 @@
+@import './common/var.scss';
+@import './mixins/mixin.scss';
+
+@include b(checkbox) {
+  height: 30px;
+  font-size: $--el-font-size-base;
+  color: #606266;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  user-select: none;
+  margin-right: 30px;
+
+  .v-checkbox__label {
+    font-size: $--el-font-size-base;
+    display: inline-block;
+    padding-left: 8px;
+    line-height: 1;
+  }
+  // .v-checkbox__input.is-checked {
+  //   width: 14px;
+  //   height: 14px;
+  //   background-color: $--color-primary;
+  //   border-color: $--color-primary;
+  // }
+  .v-checkbox__input.is-checked + .v-checkbox__label {
+    color: $--color-primary;
+  }
+}
