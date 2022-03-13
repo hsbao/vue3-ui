@@ -10,6 +10,7 @@
   padding: 0 15px;
   border-radius: 5px;
   vertical-align: middle;
+  cursor: pointer;
 
   & + .#{$namespace}-button {
     margin-left: 12px;

@@ -1,6 +1,6 @@
 <template>
   <button :class="classs" @click="handleClick">
-    <i v-if="loding" class="v-icon-loading"></i>
+    <i v-if="loading" class="v-icon-loading"></i>
     <i v-if="icon && !loading" :class="icon"></i>
     <span v-if="$slots.default"><slot></slot></span>
   </button>

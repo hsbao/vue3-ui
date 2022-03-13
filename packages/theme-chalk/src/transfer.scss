@@ -1,0 +1,44 @@
+@import './common/var.scss';
+@import './mixins/mixin.scss';
+
+@include b(transfer) {
+  display: flex;
+  align-items: center;
+  @include e(buttons) {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 30px;
+  }
+  @include e(panel) {
+    overflow: hidden;
+    background: $--color-white;
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    width: $--el-transfer-panel-width;
+    max-height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e5e7eb;
+    border-radius: 4px;
+  }
+
+  .v-transfer-panel__header {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    background: #f5f7fa;
+    margin: 0;
+    border: 1px solid #ebeef5;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    box-sizing: border-box;
+    color: #000000;
+  }
+  .v-transfer-panel__body {
+    overflow-y: scroll;
+    height: 278px;
+  }
+}

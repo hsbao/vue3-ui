@@ -6,6 +6,7 @@ import Col from '@vui/col'
 import Row from '@vui/row'
 import Checkbox from '@vui/checkbox'
 import CheckboxGroup from '@vui/checkbox-group'
+import Transfer from '@vui/transfer'
 
 const components = [
   Button,
@@ -14,7 +15,8 @@ const components = [
   Row,
   Col,
   CheckboxGroup,
-  Checkbox
+  Checkbox,
+  Transfer
 ]
 
 const install = (app: App): void => {
