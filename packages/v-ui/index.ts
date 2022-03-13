@@ -8,6 +8,8 @@ import Checkbox from '@vui/checkbox'
 import CheckboxGroup from '@vui/checkbox-group'
 import Transfer from '@vui/transfer'
 
+import Message from '@vui/message'
+
 const components = [
   Button,
   Icon,
@@ -19,9 +21,17 @@ const components = [
   Transfer
 ]
 
+const plugins = [Message]
+
 const install = (app: App): void => {
+  // 组件
   components.forEach((component) => {
     app.component(component.name, component)
+  })
+
+  // 插件
+  plugins.forEach((plugin) => {
+    app.use(plugin)
   })
 }
 

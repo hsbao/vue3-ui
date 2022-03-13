@@ -1,6 +1,9 @@
 <template>
   <v-button @click="handleClick">按钮</v-button>
-  <v-button type="success">按钮</v-button>
+  <v-button type="success" @click="openMessage">open message by vue2</v-button>
+  <v-button type="success" @click="openMessageByVue3"
+    >open message by vue3</v-button
+  >
   <div style="width: 100%; height: 10px"></div>
   <v-button-group>
     <v-button type="danger">按钮1</v-button>
@@ -61,6 +64,11 @@ export default defineComponent({
       ...useCheckbox(),
       ...useCheckboxGroup(),
       ...useTransfer()
+    }
+  },
+  methods: {
+    openMessage() {
+      this.$message('4567')
     }
   }
 })
